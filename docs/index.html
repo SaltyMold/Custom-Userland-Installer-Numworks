@@ -13,8 +13,26 @@
 
         <button id="detectBtn">Connect calculator</button>
 
-        <div id="status"></div>
         <div id="devices"></div>
+
+        <div id="dropZone" class="hidden">
+            <input id="fileInput" type="file" accept=".dfu,.bin" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 15.5V4M12 4 8 8M12 4l4 4"/>
+                <path d="M4.5 15.5v2.25A2.25 2.25 0 0 0 6.75 20h10.5a2.25 2.25 0 0 0 2.25-2.25V15.5"/>
+            </svg>
+            <div class="dropZoneTitle">Drop a .dfu file here</div>
+            <div class="dropZoneHint">or click to browse</div>
+        </div>
+
+        <div id="uploadControls" class="hidden">
+            <button id="uploadBtn" type="button">Send userland to slot B</button>
+            <div id="transferList" class="transferList"></div>
+        </div>
+
+        <div id="terminal" class="terminal" aria-live="polite">
+            <div id="terminalLog" class="terminalLog"></div>
+        </div>
     </div>
 
     <script src="index.js"></script>
